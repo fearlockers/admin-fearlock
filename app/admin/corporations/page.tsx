@@ -54,55 +54,6 @@ const corporationsData: Corporation[] = [
   },
 ]
 
-const columns: Column<Corporation>[] = [
-  {
-    key: 'id',
-    label: '法人ID',
-    sortable: true,
-  },
-  {
-    key: 'name',
-    label: '法人名',
-    sortable: true,
-  },
-  {
-    key: 'email',
-    label: 'メールアドレス',
-    sortable: true,
-  },
-  {
-    key: 'plan',
-    label: 'プラン',
-    sortable: true,
-  },
-  {
-    key: 'members',
-    label: 'メンバー数',
-    sortable: true,
-  },
-  {
-    key: 'status',
-    label: 'ステータス',
-    sortable: true,
-    render: (row) => (
-      <span
-        className={`px-2 py-1 text-xs rounded-full ${
-          row.status === 'アクティブ'
-            ? 'bg-green-100 text-green-800'
-            : 'bg-red-100 text-red-800'
-        }`}
-      >
-        {row.status}
-      </span>
-    ),
-  },
-  {
-    key: 'createdAt',
-    label: '登録日',
-    sortable: true,
-  },
-]
-
 export default function CorporationsPage() {
   const [showAddModal, setShowAddModal] = useState(false)
   const [showEditModal, setShowEditModal] = useState(false)
